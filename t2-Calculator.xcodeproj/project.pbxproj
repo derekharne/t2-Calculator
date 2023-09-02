@@ -10,6 +10,9 @@
 		6E625C9A2AA3CDEF00ABB2ED /* t2_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */; };
 		6E625C9E2AA3CDF000ABB2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */; };
 		6E625CA12AA3CDF000ABB2ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */; };
+		6E625CAD2AA3CF1C00ABB2ED /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */; };
+		6E625CB12AA3D24700ABB2ED /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CB02AA3D24700ABB2ED /* Buttons.swift */; };
+		6E625CB32AA3D4E000ABB2ED /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = t2_Calculator.entitlements; sourceTree = "<group>"; };
+		6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6E625CB02AA3D24700ABB2ED /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		6E625CA82AA3CE3100ABB2ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,6 +87,7 @@
 		6E625CA92AA3CE3800ABB2ED /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 		6E625CAA2AA3CE3E00ABB2ED /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				6E625CB02AA3D24700ABB2ED /* Buttons.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -168,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E625CB32AA3D4E000ABB2ED /* CalcButton.swift in Sources */,
 				6E625C9A2AA3CDEF00ABB2ED /* t2_CalculatorApp.swift in Sources */,
+				6E625CAD2AA3CF1C00ABB2ED /* MainView.swift in Sources */,
+				6E625CB12AA3D24700ABB2ED /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +308,7 @@
 				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/t2_Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 09022023;
 				DEVELOPMENT_ASSET_PATHS = "\"t2-Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 65FSLC78UU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -310,8 +322,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekharne.t2-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -323,7 +339,7 @@
 				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/t2_Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 09022023;
 				DEVELOPMENT_ASSET_PATHS = "\"t2-Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 65FSLC78UU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -337,8 +353,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekharne.t2-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

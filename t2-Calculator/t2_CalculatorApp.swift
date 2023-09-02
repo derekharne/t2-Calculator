@@ -11,7 +11,13 @@ import SwiftUI
 struct t2_CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            
+            MainView()
+            #if os(macOS)
+                .frame(width: 275, height: 450)
+            #endif
         }
+        #if os(macOS)
+        .windowResizability(.contentSize)
+        #endif
     }
 }
