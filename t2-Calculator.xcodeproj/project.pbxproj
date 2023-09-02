@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6E625C9A2AA3CDEF00ABB2ED /* t2_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */; };
-		6E625C9C2AA3CDEF00ABB2ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625C9B2AA3CDEF00ABB2ED /* ContentView.swift */; };
 		6E625C9E2AA3CDF000ABB2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */; };
 		6E625CA12AA3CDF000ABB2ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		6E625C962AA3CDEF00ABB2ED /* t2-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "t2-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t2_CalculatorApp.swift; sourceTree = "<group>"; };
-		6E625C9B2AA3CDEF00ABB2ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = t2_Calculator.entitlements; sourceTree = "<group>"; };
@@ -52,11 +50,14 @@
 		6E625C982AA3CDEF00ABB2ED /* t2-Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */,
-				6E625C9B2AA3CDEF00ABB2ED /* ContentView.swift */,
-				6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */,
 				6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */,
+				6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */,
+				6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */,
+				6E625CAB2AA3CE4300ABB2ED /* Classes */,
+				6E625CA92AA3CE3800ABB2ED /* Enums */,
 				6E625C9F2AA3CDF000ABB2ED /* Preview Content */,
+				6E625CAA2AA3CE3E00ABB2ED /* Structs */,
+				6E625CA82AA3CE3100ABB2ED /* Views */,
 			);
 			path = "t2-Calculator";
 			sourceTree = "<group>";
@@ -67,6 +68,34 @@
 				6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6E625CA82AA3CE3100ABB2ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E625CA92AA3CE3800ABB2ED /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		6E625CAA2AA3CE3E00ABB2ED /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		6E625CAB2AA3CE4300ABB2ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E625C9C2AA3CDEF00ABB2ED /* ContentView.swift in Sources */,
 				6E625C9A2AA3CDEF00ABB2ED /* t2_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
