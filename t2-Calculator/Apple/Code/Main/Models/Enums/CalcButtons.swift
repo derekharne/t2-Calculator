@@ -1,14 +1,14 @@
 //
-//  CalcButton.swift
+//  CalcButtons.swift
 //  t2-Calculator
 //
-//  Created by Derek Harne on 9/2/23.
+//  Created by Derek Harne on 9/4/23.
 //
 
 import Foundation
 import SwiftUI
 
-enum CalcButton: String {
+enum CalcButtons: String {
     case add = "+"
     case subtract = "-"
     case multiply = "x"

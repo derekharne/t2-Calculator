@@ -11,8 +11,10 @@
 		6E625C9E2AA3CDF000ABB2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */; };
 		6E625CA12AA3CDF000ABB2ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */; };
 		6E625CAD2AA3CF1C00ABB2ED /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */; };
-		6E625CB12AA3D24700ABB2ED /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CB02AA3D24700ABB2ED /* Buttons.swift */; };
-		6E625CB32AA3D4E000ABB2ED /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */; };
+		6E66EEF82AA690D9000A1C93 /* CalcDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E66EEF72AA690D9000A1C93 /* CalcDisplayView.swift */; };
+		6E66EEFA2AA6A93A000A1C93 /* CalcButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E66EEF92AA6A93A000A1C93 /* CalcButtonsView.swift */; };
+		6EA5D2432AA667420055431A /* CalcButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5D2422AA667420055431A /* CalcButtons.swift */; };
+		6EA5D2452AA667EE0055431A /* CalcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5D2442AA667EE0055431A /* CalcApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +24,10 @@
 		6E625CA02AA3CDF000ABB2ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = t2_Calculator.entitlements; sourceTree = "<group>"; };
 		6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		6E625CB02AA3D24700ABB2ED /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
+		6E66EEF72AA690D9000A1C93 /* CalcDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcDisplayView.swift; sourceTree = "<group>"; };
+		6E66EEF92AA6A93A000A1C93 /* CalcButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtonsView.swift; sourceTree = "<group>"; };
+		6EA5D2422AA667420055431A /* CalcButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtons.swift; sourceTree = "<group>"; };
+		6EA5D2442AA667EE0055431A /* CalcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +60,7 @@
 		6E625C982AA3CDEF00ABB2ED /* t2-Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */,
-				6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */,
-				6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */,
-				6E625CAB2AA3CE4300ABB2ED /* Classes */,
-				6E625CA92AA3CE3800ABB2ED /* Enums */,
-				6E625C9F2AA3CDF000ABB2ED /* Preview Content */,
-				6E625CAA2AA3CE3E00ABB2ED /* Structs */,
-				6E625CA82AA3CE3100ABB2ED /* Views */,
+				6EA5D2352AA659580055431A /* Apple */,
 			);
 			path = "t2-Calculator";
 			sourceTree = "<group>";
@@ -76,35 +73,84 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6E625CA82AA3CE3100ABB2ED /* Views */ = {
+		6E66EEF62AA69011000A1C93 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		6E625CA92AA3CE3800ABB2ED /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				6E625CB22AA3D4E000ABB2ED /* CalcButton.swift */,
+				6EA5D2422AA667420055431A /* CalcButtons.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		6E625CAA2AA3CE3E00ABB2ED /* Structs */ = {
+		6EA5D2352AA659580055431A /* Apple */ = {
 			isa = PBXGroup;
 			children = (
-				6E625CB02AA3D24700ABB2ED /* Buttons.swift */,
+				6EA5D2372AA65BDD0055431A /* Code */,
+				6EA5D2362AA659750055431A /* Resources */,
 			);
-			path = Structs;
+			path = Apple;
 			sourceTree = "<group>";
 		};
-		6E625CAB2AA3CE4300ABB2ED /* Classes */ = {
+		6EA5D2362AA659750055431A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E625CA22AA3CDF000ABB2ED /* t2_Calculator.entitlements */,
+				6E625C9D2AA3CDF000ABB2ED /* Assets.xcassets */,
+				6E625C9F2AA3CDF000ABB2ED /* Preview Content */,
 			);
-			path = Classes;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6EA5D2372AA65BDD0055431A /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5D2382AA65BE40055431A /* Common */,
+				6EA5D23A2AA65DCC0055431A /* Main */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		6EA5D2382AA65BE40055431A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5D2392AA65DAE0055431A /* Controller */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6EA5D2392AA65DAE0055431A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E625C992AA3CDEF00ABB2ED /* t2_CalculatorApp.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6EA5D23A2AA65DCC0055431A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5D23D2AA65DEA0055431A /* Models */,
+				6EA5D23B2AA65DD30055431A /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6EA5D23B2AA65DD30055431A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E625CAC2AA3CF1C00ABB2ED /* MainView.swift */,
+				6E66EEF72AA690D9000A1C93 /* CalcDisplayView.swift */,
+				6E66EEF92AA6A93A000A1C93 /* CalcButtonsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EA5D23D2AA65DEA0055431A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E66EEF62AA69011000A1C93 /* Enums */,
+				6EA5D2442AA667EE0055431A /* CalcApp.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E625CB32AA3D4E000ABB2ED /* CalcButton.swift in Sources */,
+				6EA5D2432AA667420055431A /* CalcButtons.swift in Sources */,
+				6EA5D2452AA667EE0055431A /* CalcApp.swift in Sources */,
+				6E66EEF82AA690D9000A1C93 /* CalcDisplayView.swift in Sources */,
 				6E625C9A2AA3CDEF00ABB2ED /* t2_CalculatorApp.swift in Sources */,
 				6E625CAD2AA3CF1C00ABB2ED /* MainView.swift in Sources */,
-				6E625CB12AA3D24700ABB2ED /* Buttons.swift in Sources */,
+				6E66EEFA2AA6A93A000A1C93 /* CalcButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/t2_Calculator.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/Apple/Resources/t2_Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 09022023;
-				DEVELOPMENT_ASSET_PATHS = "\"t2-Calculator/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 09042023;
+				DEVELOPMENT_ASSET_PATHS = "t2-Calculator/Apple/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 65FSLC78UU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -336,11 +384,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/t2_Calculator.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "t2-Calculator/Apple/Resources/t2_Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 09022023;
-				DEVELOPMENT_ASSET_PATHS = "\"t2-Calculator/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 09042023;
+				DEVELOPMENT_ASSET_PATHS = "t2-Calculator/Apple/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 65FSLC78UU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
