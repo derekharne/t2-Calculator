@@ -28,7 +28,7 @@ import SwiftUI
     func buttonWidth (item: CalcButtons) -> CGFloat {
         #if os(iOS)
         if item == .zero {
-            return ((UIScreen.main.bounds.width - (4*12)) / 4) * 2
+            return ((UIScreen.main.bounds.width - (5*12)) / 4) * 2
         }
         return (UIScreen.main.bounds.width - (5*12)) / 4
         #else
