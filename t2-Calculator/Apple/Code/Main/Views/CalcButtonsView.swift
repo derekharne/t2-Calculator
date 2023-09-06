@@ -20,7 +20,7 @@ struct CalcButtonsView: View {
                     }, label: {
                         Text(item.rawValue)
                             .foregroundColor(.white)
-                            .font(.system(size:16))
+                            .font(.system(size: calcApp.calcButtonFontSize))
                             .frame(
                                 width: calcApp.buttonWidth(item: item),
                                 height: calcApp.buttonHeight()

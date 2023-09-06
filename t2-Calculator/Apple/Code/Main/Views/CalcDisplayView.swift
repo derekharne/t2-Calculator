@@ -15,9 +15,7 @@ struct CalcDisplayView: View {
         HStack {
             Spacer()
             Text(calcApp.calcDisplay)
-                //TODO:
-                //Need to implment font size per device.
-                .font(.system(size: 36))
+                .font(.system(size: calcApp.calcDisplayFontSize))
                 .foregroundColor(.white)
                 .padding()
         }

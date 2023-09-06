@@ -10,11 +10,40 @@ import SwiftUI
 
 @MainActor class CalcApp: ObservableObject {
     @Published var calcDisplay = "0"
+    @Published var calcDisplayFontSize: CGFloat
+    @Published var calcButtonFontSize: CGFloat
     
     var calcValueOne: Double = 0.0
     var calcValueTwo: Double = 0.0
     var calcOperation: String = ""
     var calcResetDisplay: Bool = false
+    var calcDisplayLimit: Int = 10
+    
+    init() {
+        #if os(macOS)
+        calcDisplayFontSize = 36
+        calcButtonFontSize = 22
+        #endif
+        #if os(iOS)
+        //Default iOS Values, setting to zero as no iOS device exists that isn't an iPhone or iPad, for now.
+        calcDisplayFontSize = 0
+        calcButtonFontSize = 0
+        if UIDevice.isIPad == true {
+            calcDisplayFontSize = 120
+            calcButtonFontSize = 48
+        }
+        if UIDevice.isIPhone == true {
+            calcDisplayFontSize = 44
+            calcButtonFontSize = 22
+        }
+        #endif
+    }
+    
+    //TODO:
+    //(2) Implement keyboard input.
+    //(3) Implement C
+    //(4) Align 0 on iOS.
+    //(5) Visual bug on iPad, verify on hardware.
     
     
     let buttons: [[CalcButtons]] = [
@@ -93,7 +122,7 @@ import SwiftUI
         calcOperation = ""
         calcValueOne = 0.0
         calcValueTwo = 0.0
-        
+        calcResetDisplay = false
     }
     
     func percentage() {
@@ -115,7 +144,9 @@ import SwiftUI
         if calcDisplay.contains(".") && number.contains("."){
             return
         }
-        
+        if calcDisplay.count >= calcDisplayLimit {
+            return
+        }
         if calcDisplay == "0" || calcResetDisplay == true {
             calcDisplay = number
             calcResetDisplay = false
@@ -149,5 +180,11 @@ import SwiftUI
         
         calcDisplay = String(result)
         emptyDecimalSuffixCheck()
+        
+        if calcDisplay.count >= calcDisplayLimit {
+            allClear()
+            calcDisplay = "Error: Too long."
+        }
+        
     }
 }
