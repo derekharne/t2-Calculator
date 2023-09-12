@@ -12,6 +12,13 @@ import SwiftUI
     @Published var calcDisplay = "0"
     @Published var calcDisplayFontSize: CGFloat
     @Published var calcButtonFontSize: CGFloat
+    @Published var buttons: [[CalcButtons]] = [
+        [.ac, .plusminus, .percentage, .divide],
+        [.seven, .eight, .nine, .multiply],
+        [.four, .five, .six, .subtract],
+        [.one, .two, .three, .add],
+        [.zero, .decimal, .equal]
+    ]
     
     var calcValueOne: Double = 0.0
     var calcValueTwo: Double = 0.0
@@ -21,7 +28,7 @@ import SwiftUI
     
     init() {
         #if os(macOS)
-        calcDisplayFontSize = 36
+        calcDisplayFontSize = 38
         calcButtonFontSize = 22
         #endif
         #if os(iOS)
@@ -41,18 +48,8 @@ import SwiftUI
     
     //TODO:
     //(2) Implement keyboard input.
-    //(3) Implement C
     //(4) Align 0 on iOS.
     //(5) Visual bug on iPad, verify on hardware.
-    
-    
-    let buttons: [[CalcButtons]] = [
-        [.ac, .plusminus, .percentage, .divide],
-        [.seven, .eight, .nine, .multiply],
-        [.four, .five, .six, .subtract],
-        [.one, .two, .three, .add],
-        [.zero, .decimal, .equal]
-    ]
     
     func buttonWidth (item: CalcButtons) -> CGFloat {
         #if os(iOS)
@@ -84,6 +81,8 @@ import SwiftUI
             plusMinus()
         case .ac:
             allClear()
+        case .c:
+            clear()
         case .percentage:
             percentage()
         case .equal:
@@ -154,6 +153,14 @@ import SwiftUI
         else {
             calcDisplay = calcDisplay + number
         }
+        
+        buttons = [
+            [.c, .plusminus, .percentage, .divide],
+            [.seven, .eight, .nine, .multiply],
+            [.four, .five, .six, .subtract],
+            [.one, .two, .three, .add],
+            [.zero, .decimal, .equal]
+        ]
     }
     
     func calculate() {
@@ -185,6 +192,17 @@ import SwiftUI
             allClear()
             calcDisplay = "Error: Too long."
         }
+    }
+    
+    func clear() {
+        calcDisplay = "0"
         
+        buttons = [
+            [.ac, .plusminus, .percentage, .divide],
+            [.seven, .eight, .nine, .multiply],
+            [.four, .five, .six, .subtract],
+            [.one, .two, .three, .add],
+            [.zero, .decimal, .equal]
+        ]
     }
 }

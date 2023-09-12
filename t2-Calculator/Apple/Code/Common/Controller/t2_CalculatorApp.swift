@@ -13,7 +13,7 @@ struct t2_CalculatorApp: App {
         WindowGroup {
             MainView()
             #if os(macOS)
-                .frame(width: 275, height: 450)
+                .frame(width: 280, height: 450)
             #endif
         }
         #if os(macOS)
